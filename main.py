@@ -13,3 +13,5 @@ def add_student():
         open(f"{name}/{student_code}.txt", "w+")
         open(f"{name}/{funds}.txt", "w+")
         print("student sucssesfuly added.")
+    else :
+        print("this student have a acount")
