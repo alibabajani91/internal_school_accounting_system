@@ -35,9 +35,9 @@ def buy():
         Purchase_amount = int(input("Purchase amount:"))
         fr = open(f"accounts/{name}/funds.txt", "r")
         funds = fr.read()
-        funds1 = int(funds) - int(Purchase_amount)
+        funds = int(funds) - int(Purchase_amount)
         fw = open(f"accounts/{name}/funds.txt", "w")
-        fw.write(str(funds1))
+        fw.write(str(funds))
         print("sucssesfuly")
     else :
         print("there is not ant student with this name")
