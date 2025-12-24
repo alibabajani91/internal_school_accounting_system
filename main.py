@@ -1,7 +1,7 @@
 import time
 import os
 
-print("wellcome to s-a.")
+print("wellcome to school-acounting.")
 print("developed by alibabajani.")
 
 def add_student():
