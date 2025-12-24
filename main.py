@@ -21,11 +21,11 @@ def add_student():
 def load_student():
     name = input("name:")
     if os.path.exists(name):
-        n = open(f"{name}/name.txt", "r")
+        n = open(f"accounts/{name}/name.txt", "r")
         print(f"name:{n.read()}")
-        s = open(f"{name}/student_code.txt", "r")
+        s = open(f"accounts/{name}/student_code.txt", "r")
         print(f"student code:{s.read()}")
-        f = open(f"{name}/funds.txt", "r")
+        f = open(f"accounts/{name}/funds.txt", "r")
         print(f"funds:{f.read()}")
     else :
         print("there is not ant student with this name")
@@ -33,10 +33,10 @@ def buy():
     name = input("name:")
     if os.path.exists(name):
         Purchase_amount = int(input("Purchase amount:"))
-        fr = open(f"{name}/funds.txt", "r")
+        fr = open(f"accounts/{name}/funds.txt", "r")
         funds = fr.read()
         funds1 = int(funds) - int(Purchase_amount)
-        fw = open(f"{name}/funds.txt", "w")
+        fw = open(f"accounts/{name}/funds.txt", "w")
         fw.write(str(funds1))
         print("sucssesfuly")
     else :
