@@ -39,6 +39,7 @@ def buy():
         funds = int(funds) - int(Purchase_amount)
         fw = open(f"accounts/{name}/funds.txt", "w")
         fw.write(str(funds))
+        loging(name,Purchase_amount)
         print("sucssesfuly")
     else :
         print("there is not ant student with this name")
@@ -66,7 +67,7 @@ def re_funds():
         print("sucssesfuly")
     else :
         print("there is not ant student with this name")
-def loging(name,student_code,Purchase_amount):
+def loging(name,Purchase_amount):
     f = open("log.txt", "a")
-    f.write(f"the {name} with {student_code} student code, in {time.ctime(time.time())} Purchased {Purchase_amount}.\n")
+    f.write(f"the {name} in {time.ctime(time.time())} Purchased {Purchase_amount}.\n")
     f.close()
