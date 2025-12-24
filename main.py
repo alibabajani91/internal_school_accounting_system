@@ -41,3 +41,15 @@ def buy():
         print("sucssesfuly")
     else :
         print("there is not ant student with this name")
+def add_funds():
+    name = input("name:")
+    if os.path.exists(name):
+        amount = int(input("amount:"))
+        fr = open(f"accounts/{name}/funds.txt", "r")
+        funds = fr.read()
+        funds = int(funds) + int(amount)
+        fw = open(f"accounts/{name}/funds.txt", "w")
+        fw.write(str(funds))
+        print("sucssesfuly")
+    else :
+        print("there is not ant student with this name")
