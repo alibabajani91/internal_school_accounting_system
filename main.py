@@ -22,8 +22,8 @@ def load_student():
     name = input("name:")
     if os.path.exists(name):
         n = open(f"{name}/name.txt", "r")
-        print(f"name:{n.read}")
+        print(f"name:{n.read()}")
         s = open(f"{name}/student_code.txt", "r")
-        print(f"name:{s.read}")
+        print(f"student code:{s.read()}")
         f = open(f"{name}/funds.txt", "r")
-        print(f"name:{f.read}")
+        print(f"funds:{f.read()}")
