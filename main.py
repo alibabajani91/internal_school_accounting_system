@@ -6,19 +6,23 @@ print("developed by alibabajani.")
 
 def add_student():
     name = input("name:")
-    if os.path.exists(f"accounts/{name}") == False:
-        student_code = input("student code:")
-        funds = input("funds:")
-        os.mkdir(f"accounts/{name}")
-        n = open(f"accounts/{name}/name.txt", "w+")
-        n.write(name)
-        s = open(f"accounts/{name}/student_code.txt", "w+")
-        s.write(student_code)
-        f = open(f"accounts/{name}/funds.txt", "w+")
-        f.write(funds)
-        print("student sucssesfuly added.")
-    else :
-        print("this student have a acount")
+    if os.path.exists("accounts"):
+        if os.path.exists(f"accounts/{name}") == False:
+            student_code = input("student code:")
+            funds = input("funds:")
+            os.mkdir(f"accounts/{name}")
+            n = open(f"accounts/{name}/name.txt", "w+")
+            n.write(name)
+            s = open(f"accounts/{name}/student_code.txt", "w+")
+            s.write(student_code)
+            f = open(f"accounts/{name}/funds.txt", "w+")
+            f.write(funds)
+            print("student sucssesfuly added.")
+        else :
+            print("this student have a acount")
+    else:
+        os.mkdir("accounts")
+        print("there wasn't a accounts folder.(I crated it.run that again)")
 def load_student():
     name = input("name:")
     if os.path.exists(f"accounts/{name}"):
