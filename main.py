@@ -29,3 +29,15 @@ def load_student():
         print(f"funds:{f.read()}")
     else :
         print("there is not ant student with this name")
+def buy():
+    name = input("name:")
+    if os.path.exists(name):
+        Purchase_amount = int(input("Purchase amount:"))
+        fr = open(f"{name}/funds.txt", "r")
+        funds = fr.read()
+        funds1 = int(funds) - int(Purchase_amount)
+        fw = open(f"{name}/funds.txt", "w")
+        fw.write(str(funds1))
+        print("sucssesfuly")
+    else :
+        print("there is not ant student with this name")
