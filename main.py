@@ -71,3 +71,19 @@ def loging(name,Purchase_amount):
     f = open("log.txt", "a")
     f.write(f"the {name} in {time.ctime(time.time())} Purchased {Purchase_amount}.\n")
     f.close()
+while True:
+    cmd = input(">:")
+    if cmd == "add student":
+        add_student()
+    elif cmd == "load student":
+        load_student()
+    elif cmd == "buy":
+        buy()
+    elif cmd == "add fund":
+        add_funds()
+    elif cmd == "refunds":
+        re_funds()
+    elif cmd == "":
+        pass
+    else:
+        print("there isn't any command with this name")
