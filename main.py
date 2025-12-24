@@ -5,9 +5,9 @@ print("developed by alibabajani.")
 
 def add_student():
     name = input("name:")
-    student_code = input("student code:")
-    funds = input("funds:")
     if os.path.exists(name) == False:
+        student_code = input("student code:")
+        funds = input("funds:")
         os.mkdir(f"accounts/{name}")
         n = open(f"accounts/{name}/name.txt", "w+")
         n.write(name)
