@@ -53,3 +53,15 @@ def add_funds():
         print("sucssesfuly")
     else :
         print("there is not ant student with this name")
+def re_funds():
+    name = input("name:")
+    if os.path.exists(name):
+        re_fund_amount = int(input("re funds amount:"))
+        fr = open(f"accounts/{name}/funds.txt", "r")
+        funds = fr.read()
+        funds = int(funds) - int(re_fund_amount)
+        fw = open(f"accounts/{name}/funds.txt", "w")
+        fw.write(str(funds))
+        print("sucssesfuly")
+    else :
+        print("there is not ant student with this name")
