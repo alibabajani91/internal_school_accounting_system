@@ -1,3 +1,4 @@
+import time
 import os
 
 print("wellcome to s-a.")
@@ -65,3 +66,7 @@ def re_funds():
         print("sucssesfuly")
     else :
         print("there is not ant student with this name")
+def loging(name,student_code,Purchase_amount):
+    f = open("log.txt", "a")
+    f.write(f"the {name} with {student_code} student code, in {time.ctime(time.time())} Purchased {Purchase_amount}.\n")
+    f.close()
