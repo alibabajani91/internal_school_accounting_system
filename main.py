@@ -6,7 +6,7 @@ print("developed by alibabajani.")
 
 def add_student():
     name = input("name:")
-    if os.path.exists(f"acounts/{name}") == False:
+    if os.path.exists(f"accounts/{name}") == False:
         student_code = input("student code:")
         funds = input("funds:")
         os.mkdir(f"accounts/{name}")
@@ -21,7 +21,7 @@ def add_student():
         print("this student have a acount")
 def load_student():
     name = input("name:")
-    if os.path.exists(f"acounts/{name}"):
+    if os.path.exists(f"accounts/{name}"):
         n = open(f"accounts/{name}/name.txt", "r")
         print(f"name:{n.read()}")
         s = open(f"accounts/{name}/student_code.txt", "r")
@@ -29,10 +29,10 @@ def load_student():
         f = open(f"accounts/{name}/funds.txt", "r")
         print(f"funds:{f.read()}")
     else :
-        print("there is not ant student with this name")
+        print("there is not any student with this name")
 def buy():
     name = input("name:")
-    if os.path.exists(f"acounts/{name}"):
+    if os.path.exists(f"accounts/{name}"):
         Purchase_amount = int(input("Purchase amount:"))
         fr = open(f"accounts/{name}/funds.txt", "r")
         funds = fr.read()
@@ -42,10 +42,10 @@ def buy():
         loging(name,Purchase_amount)
         print("sucssesfuly")
     else :
-        print("there is not ant student with this name")
+        print("there is not any student with this name")
 def add_funds():
     name = input("name:")
-    if os.path.exists(f"acounts/{name}"):
+    if os.path.exists(f"accounts/{name}"):
         amount = int(input("amount:"))
         fr = open(f"accounts/{name}/funds.txt", "r")
         funds = fr.read()
@@ -54,10 +54,10 @@ def add_funds():
         fw.write(str(funds))
         print("sucssesfuly")
     else :
-        print("there is not ant student with this name")
+        print("there is not any student with this name")
 def re_funds():
     name = input("name:")
-    if os.path.exists(f"acounts/{name}"):
+    if os.path.exists(f"accounts/{name}"):
         re_fund_amount = int(input("re funds amount:"))
         fr = open(f"accounts/{name}/funds.txt", "r")
         funds = fr.read()
@@ -66,7 +66,7 @@ def re_funds():
         fw.write(str(funds))
         print("sucssesfuly")
     else :
-        print("there is not ant student with this name")
+        print("there is not any student with this name")
 def loging(name,Purchase_amount):
     f = open("log.txt", "a")
     f.write(f"the {name} in {time.ctime(time.time())} Purchased {Purchase_amount}.\n")
