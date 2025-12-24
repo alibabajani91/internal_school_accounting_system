@@ -7,7 +7,8 @@ def add_student():
     name = input("name:")
     student_code = input("student code:")
     funds = input("funds:")
-    if os.path.exists(name):
+    if os.path.exists(name) == False:
+        os.mkdir(f"{name}")
         open(f"{name}/{name}.txt", "w+")
         open(f"{name}/{student_code}.txt", "w+")
         open(f"{name}/{funds}.txt", "w+")
