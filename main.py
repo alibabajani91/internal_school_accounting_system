@@ -27,3 +27,5 @@ def load_student():
         print(f"student code:{s.read()}")
         f = open(f"{name}/funds.txt", "r")
         print(f"funds:{f.read()}")
+    else :
+        print("there is not ant student with this name")
