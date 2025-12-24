@@ -8,12 +8,12 @@ def add_student():
     student_code = input("student code:")
     funds = input("funds:")
     if os.path.exists(name) == False:
-        os.mkdir(f"{name}")
-        n = open(f"{name}/name.txt", "w+")
+        os.mkdir(f"accounts/{name}")
+        n = open(f"accounts/{name}/name.txt", "w+")
         n.write(name)
-        s = open(f"{name}/student_code.txt", "w+")
+        s = open(f"accounts/{name}/student_code.txt", "w+")
         s.write(student_code)
-        f = open(f"{name}/funds.txt", "w+")
+        f = open(f"accounts/{name}/funds.txt", "w+")
         f.write(funds)
         print("student sucssesfuly added.")
     else :
